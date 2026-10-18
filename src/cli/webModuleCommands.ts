@@ -30,6 +30,7 @@ export const registerWebModuleCommands = (
     }),
     options: z.object({
       importerUrl: webModuleTraceInputSchema.shape.importer_url,
+      // Describe the optional wrapper: help reads the outer schema's metadata.
       importMapPath: importMapInputSchema.shape.path
         .optional()
         .describe(
